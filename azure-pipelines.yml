@@ -16,6 +16,10 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    ArtifactName: CarWebsite
 
 - script: |
     npm install -g @angular/cli
